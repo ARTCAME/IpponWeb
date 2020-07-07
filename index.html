@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" >
+    <title>IPPONGYM</title>
+    <style>
+        @font-face {
+            font-family: myriad;
+            src: url('./fonts/Myriad_Pro_Bold_Condensed_Italic.ttf') format('truetype');
+        }
+        * {
+            background-color: rgb(0, 131, 81);
+            font-family: myriad, sans-serif;
+        }
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        footer {
+            bottom: 0;
+            display: flex;
+            max-height: 100px;
+            position: absolute;
+            width: 100%;
+        }
+        .footer-wrps {
+            flex: 1 1 50%;
+        }
+        .footer-wrps img {
+            max-width: 30%;
+            margin: 1rem;
+        }
+        #wrp-logo {
+            left: 50%;
+            margin: auto;
+            position: absolute;
+            text-align: center;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: calc(300px + (600 - 300) * ((100vw - 300px) / (1600 - 300))); /* minsize + (max-min) * (maxvw - minvw) * (maxpx - minpx) */
+        }
+        #wrp-phone {
+            margin-top: 5px;
+        }
+        #wrp-phone img {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrp-logo">
+        <img src="images/logo_1.svg" alt="images/svg+xml">
+    </div>
+    <footer>
+        <div class="footer-wrps" id="wrp-rrss">
+            <img src="images/rrss.svg" alt="images/svg+xml">
+        </div>
+        <div class="footer-wrps" id="wrp-phone">
+            <img src="images/phone.svg" alt="images/svg+xml">
+        </div>
+    </footer>
+</body>
+</html>
