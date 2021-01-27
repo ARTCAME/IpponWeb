@@ -1,0 +1,106 @@
+/* General styles */
+@font-face {
+    font-family: myriad;
+    src: url('../../fonts/Myriad_Pro_Bold_Condensed_Italic.ttf') format('truetype');
+}
+body,
+#page-wrapper {
+    height: 100%;
+    overflow-y: scroll;
+    position: relative;
+}
+#tab1 img,
+#tab2 img {
+    height: 38px!important;
+}
+#tab1 img.horizontal-variant,
+#tab2 img.horizontal-variant { /* Horizontal icons must has specific height */
+    height: 28px!important;
+    max-width: unset;
+}
+#tab3 img { /* Timetable Karate tab */
+    height: 100px!important;
+    max-width: unset!important;
+}
+/* Image based logo */
+.header-lower {
+    transition: background .15s ease-in;
+}
+.grecaptcha-badge {
+    visibility: hidden; 
+}
+.js-scroll-trigger {
+    background-color: transparent!important;
+    color: #fff!important;
+}
+.header-lower .logo {
+    transform: translateY(50%);
+}
+.map_ifream {
+    margin-top: 100px;
+}
+.timetable-cell a {
+    width: 100%!important;
+}
+.timetable-monitor {
+    height: 100%;
+    width: 100%;
+}
+.timetable-monitor span {
+    color: #FFF;
+    font-weight: bold;
+    left: 50%;
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0px);
+	transition:all ease 0.5s 0s;
+}
+.timetable-monitor:before {
+    background-color: rgba(0, 131, 81, 0.7);
+    content: "";
+    display: block;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    overflow: hidden;
+    width: 100%;
+	transition:all ease 0.5s 0s;
+}
+.timetable-cell:hover .timetable-monitor:before,
+.timetable-cell:hover .timetable-monitor span {
+	opacity:1;
+}
+.title-nobg {
+    color: #000!important;
+	font-size: 60px!important;
+    font-weight: 800!important;
+    line-height: 110%!important;
+    margin-bottom: 0!important;
+    position: relative!important;
+    text-transform: uppercase!important;
+}
+.title-top-bordered {
+    border-top: 1px solid rgba(0, 131, 81, 1);
+    padding-top: 25px;
+}
+.wrp-ig-logo {
+    width: 120px;
+}
+.wrp-ig-logo img,
+.wrp-ig-logo-footer img {
+    width: 100%;
+}
+.wrp-ig-logo-footer {
+    margin: 0 auto;
+    width: 200px;
+}
+.wrp-slider-ig-logo {
+    width: 220px;
+}
+#caption-recaptcha {
+    font-size: 10px!important;
+    line-height: 1!important;
+}
