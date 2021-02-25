@@ -17,7 +17,7 @@ if (isset($_POST['email']) && $_POST['email']) {
 $showMessage = '';
 /* Validanting the captcha and sending the e-mail if the spam filter is passed */
 $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify'; 
-$recaptcha_secret = '6Lc-dr0ZAAAAAEVYI6VUQAABx39hKX86nHnGsEFA'; 
+$recaptcha_secret = ''; 
 $recaptcha_response = $_POST['recaptcha_response']; 
 $recaptcha = file_get_contents($recaptcha_url . '?secret=' . $recaptcha_secret . '&response=' . $recaptcha_response); 
 $recaptcha = json_decode($recaptcha); 
@@ -35,7 +35,7 @@ if($recaptcha->score >= 0.7){
         $mail->Username   = 'ippongymzaragoza@gmail.com';
         $mail->addAddress('ippongymzaragoza@gmail.com');
         /* Using Google app password */
-        $mail->Password   = 'ycmxgwxwjfcsrjvf';
+        $mail->Password   = '';
         // $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         // $mail->SMTPSecure = 'tls';
         $mail->Port       = 587;
